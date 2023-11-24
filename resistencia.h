@@ -45,7 +45,7 @@ private slots:
     void on_comboBox_suma3_currentIndexChanged(int index);
 
     void on_comboBox_multiplicador_currentIndexChanged(int index);
-    void on_comboBox_tolerancia_currentIndexChanged();
+    void on_comboBox_tolerancia_currentIndexChanged(int index);
 
     void on_comboBox_prueba_currentIndexChanged(int index); /// es de prueba
 

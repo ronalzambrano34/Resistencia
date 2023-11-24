@@ -28,22 +28,8 @@
         <file>res/Symbol-Refresh.ico</file>
         <file>res/Symbol-Restricted.ico</file>
         <file>res/Symbol-Stop.ico</file>
-        <file>res/wall 06.png</file>
         <file>res/Under-construction.ico</file>
-        <file>res/colores/1negro.png</file>
-        <file>res/colores/2marron.png</file>
-        <file>res/colores/3rojo.png</file>
-        <file>res/colores/4naranja.png</file>
-        <file>res/colores/5amarillo.png</file>
-        <file>res/colores/7verde.png</file>
-        <file>res/colores/7violeta.png</file>
-        <file>res/colores/8azul.png</file>
-        <file>res/colores/8gris.png</file>
-        <file>res/colores/9blanco.png</file>
-        <file>res/colores/dorado.png</file>
-        <file>res/colores/plateado.png</file>
-        <file>res/colores/resistor_color_5band.png</file>
-        <file>res/colores/sin color.png</file>
+        <file>res/resistor_color_5band.png</file>
         <file>res/PAGINA.png</file>
     </qresource>
 </RCC>

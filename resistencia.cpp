@@ -23,34 +23,6 @@ Resistencia::Resistencia(QWidget *parent) : QMainWindow(parent),
     QList<QColor> bgColors{QColor(Qt::black), QColor(153, 76, 0, 255), QColor(Qt::red), QColor(255, 80, 0, 255), QColor(Qt::yellow), QColor(Qt::green), QColor(Qt::blue), QColor(149, 0, 223, 255), QColor(124, 124, 124, 255), QColor(Qt::white), QColor(209, 190, 76, 255), QColor(208, 253, 255, 255)};
     QList<QColor> fgColors{QColor(Qt::black), QColor(Qt::white), QColor(153, 76, 0, 255)};
 
-    /// Rellenamos los colores de los combobox.
-    // ui->comboBox_prueba->setItemData(0, QBrush(fgColors.at(1)), Qt::TextColorRole);
-    // ui->comboBox_prueba->setItemData(6, QBrush(fgColors.at(1)), Qt::TextColorRole);
-    // ui->comboBox_prueba->setItemData(7, QBrush(fgColors.at(1)), Qt::TextColorRole);
-    // ui->comboBox_suma1->setItemData(0, QBrush(fgColors.at(1)), Qt::TextColorRole);
-    // ui->comboBox_suma1->setItemData(6, QBrush(fgColors.at(1)), Qt::TextColorRole);
-    // ui->comboBox_suma1->setItemData(7, QBrush(fgColors.at(1)), Qt::TextColorRole);
-    // ui->comboBox_suma2->setItemData(0, QBrush(fgColors.at(1)), Qt::TextColorRole);
-    // ui->comboBox_suma2->setItemData(6, QBrush(fgColors.at(1)), Qt::TextColorRole);
-    // ui->comboBox_suma2->setItemData(7, QBrush(fgColors.at(1)), Qt::TextColorRole);
-    // ui->comboBox_suma3->setItemData(0, QBrush(fgColors.at(1)), Qt::TextColorRole);
-    // ui->comboBox_suma3->setItemData(6, QBrush(fgColors.at(1)), Qt::TextColorRole);
-    // ui->comboBox_suma3->setItemData(7, QBrush(fgColors.at(1)), Qt::TextColorRole);
-    // ui->comboBox_multiplicador->setItemData(0, QBrush(fgColors.at(1)), Qt::TextColorRole);
-    // ui->comboBox_multiplicador->setItemData(6, QBrush(fgColors.at(1)), Qt::TextColorRole);
-    // ui->comboBox_multiplicador->setItemData(7, QBrush(fgColors.at(1)), Qt::TextColorRole);
-    // ui->comboBox_tolerancia->setItemData(0, QBrush(fgColors.at(1)), Qt::TextColorRole);
-    // ui->comboBox_tolerancia->setItemData(6, QBrush(fgColors.at(1)), Qt::TextColorRole);
-    // ui->comboBox_tolerancia->setItemData(7, QBrush(fgColors.at(1)), Qt::TextColorRole);
-    // for (int var = 0; var < bgColors.count(); ++var)
-    // {
-    //     ui->comboBox_prueba->setItemData(var, QBrush(bgColors.at(var)), Qt::BackgroundColorRole);
-    //     ui->comboBox_suma1->setItemData(var, QBrush(bgColors.at(var)), Qt::BackgroundColorRole);
-    //     ui->comboBox_suma2->setItemData(var, QBrush(bgColors.at(var)), Qt::BackgroundColorRole);
-    //     ui->comboBox_suma3->setItemData(var, QBrush(bgColors.at(var)), Qt::BackgroundColorRole);
-    //     ui->comboBox_multiplicador->setItemData(var, QBrush(bgColors.at(var)), Qt::BackgroundColorRole);
-    //     ui->comboBox_tolerancia->setItemData(var, QBrush(bgColors.at(var)), Qt::BackgroundColorRole);
-    // }
 
     QComboBox *comboBoxes[] = {ui->comboBox_prueba, ui->comboBox_suma1, ui->comboBox_suma2, ui->comboBox_suma3, ui->comboBox_multiplicador, ui->comboBox_tolerancia};
 
@@ -178,17 +150,17 @@ QString Resistencia::obten_colores_del_boton(int index)
     // Crear un arreglo de colores y estilos correspondientes
     QList<ComboBoxStyle> comboBoxStyles = {
         {0, "QComboBox { background-color: black; color: white; selection-background-color: rgb(0,0,0,0); selection-color: rgb(255, 255, 255); }"},
-        {1, "QComboBox { background-color: rgb(153,76,0); selection-background-color: rgb(0,0,0,0); }"},
-        {2, "QComboBox { background-color: red; selection-background-color: rgb(0,0,0,0); }"},
+        {1, "QComboBox { background-color: rgb(153,76,0); selection-background-color: rgb(0,0,0,0); selection-color: rgb(255, 255, 255); }"},
+        {2, "QComboBox { background-color: rgb(255,0,0); selection-background-color: rgb(0,0,0,0); selection-color: rgb(255, 255, 255); }"},
         {3, "QComboBox { background-color: rgb(255,80,0); selection-background-color: rgb(0,0,0,0); }"},
         {4, "QComboBox { background-color: yellow; color: black; selection-background-color: rgb(0,0,0,0); selection-color: rgb(70, 70, 70); }"},
-        {5, "QComboBox { background-color: green; selection-background-color: rgb(0,0,0,0); selection-color: rgb(255, 255, 255); }"},
-        {6, "QComboBox { background-color: blue; selection-background-color: rgb(0,0,0,0); selection-color: rgb(255, 255, 255); }"},
-        {7, "QComboBox { background-color: rgb(149,0,223,255); selection-background-color: rgb(0,0,0,0); selection-color: rgb(255, 255, 255); }"},
-        {8, "QComboBox { background-color: rgb(124,124,124,255); selection-background-color: rgb(0,0,0,0); selection-color: rgb(255, 255, 255); }"},
+        {5, "QComboBox { background-color: rgb(0,255,0); selection-background-color: rgb(0,0,0,0); selection-color: rgb(255, 255, 255); }"},
+        {6, "QComboBox { background-color: rgb(0,0,255); selection-background-color: rgb(0,0,0,0); selection-color: rgb(255, 255, 255); }"},
+        {7, "QComboBox { background-color: rgb(149,0,223); selection-background-color: rgb(0,0,0,0); selection-color: rgb(255, 255, 255); }"},
+        {8, "QComboBox { background-color: rgb(124,124,124); selection-background-color: rgb(0,0,0,0); selection-color: rgb(255, 255, 255); }"},
         {9, "QComboBox { background-color: white; color: black; selection-background-color: rgb(0,0,0,0); selection-color: rgb(70, 70, 70); }"},
         {10, "QComboBox { background-color: rgb(209,190,76,180); selection-background-color: rgb(0,0,0,0); selection-color: rgb(255, 255, 255); }"},
-        {11, "QComboBox { background-color: rgb(208,253,255,180); color: black; selection-background-color: rgb(0,0,0,0); selection-color: rgb(70, 70, 70); }"},
+        {11, "QComboBox { background-color: rgb(208,253,255,180); selection-background-color: rgb(0,0,0,0); selection-color: rgb(70, 70, 70); }"},
         // Agregar el resto de los estilos
     };
 
@@ -297,9 +269,10 @@ void Resistencia::on_comboBox_multiplicador_currentIndexChanged(int index)
     ui->comboBox_multiplicador->setStyleSheet(obten_colores_del_boton(index));
 }
 
-void Resistencia::on_comboBox_tolerancia_currentIndexChanged()
+void Resistencia::on_comboBox_tolerancia_currentIndexChanged(int index)
 {
     calcular_Color();
+    ui->comboBox_tolerancia->setStyleSheet(obten_colores_del_boton(index));
 }
 
 ///////////////////////////////////////////////////////
@@ -313,12 +286,12 @@ void Resistencia::on_actionAcerca_triggered()
                                                     "<blockquote>"
                                                     "<p>Santiago de Cuba (Cuba)"
                                                     "<p>Movil: <strong>+53 53843778</strong> "
-                                                    "<p><a href=\"https://wa.me/qr/OYEYTBZMFJWWI1\"><font color=green>WhatsApp.</font>" /// LINK  https://wa.me/qr/OYEYTBZMFJWWI1
+                                                    "<p><a href=\"https://wa.me/qr/OYEYTBZMFJWWI1\"><font color=green>WhatsApp.</font>" "  " /// LINK  https://wa.me/qr/OYEYTBZMFJWWI1
                                                     "<a href=\"https://t.me/MrVirus_CU\"><strong>Telegram.</strong></a>"
                                                     "</blockquote>"));
 }
 
 void Resistencia::on_actionLey_de_Ohm_triggered()
 {
-    QMessageBox::about(this, tr("Acerca"), "");
+    QMessageBox::about(this, tr("Acerca"), "<img src=\":/new/prefix1/res/Ley_Ohm.png\" alt=\"Imagen de un gato\">");
 }

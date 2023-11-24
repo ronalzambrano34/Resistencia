@@ -29,6 +29,9 @@
    <iconset resource="res.qrc">
     <normaloff>:/new/prefix1/res/1.ico</normaloff>:/new/prefix1/res/1.ico</iconset>
   </property>
+  <property name="styleSheet">
+   <string notr="true">background-color: rgb(222, 250, 255);</string>
+  </property>
   <property name="unifiedTitleAndToolBarOnMac">
    <bool>true</bool>
   </property>
@@ -38,13 +41,6 @@
    </property>
    <layout class="QGridLayout" name="gridLayout_5">
     <item row="1" column="0">
-     <widget class="Line" name="line_10">
-      <property name="orientation">
-       <enum>Qt::Horizontal</enum>
-      </property>
-     </widget>
-    </item>
-    <item row="0" column="0">
      <widget class="QTabWidget" name="tabWidget">
       <property name="enabled">
        <bool>true</bool>
@@ -54,6 +50,9 @@
         <pointsize>10</pointsize>
        </font>
       </property>
+      <property name="styleSheet">
+       <string notr="true">background-color: rgb(202, 230, 235);</string>
+      </property>
       <property name="tabPosition">
        <enum>QTabWidget::North</enum>
       </property>
@@ -61,7 +60,7 @@
        <enum>QTabWidget::Triangular</enum>
       </property>
       <property name="currentIndex">
-       <number>0</number>
+       <number>1</number>
       </property>
       <property name="usesScrollButtons">
        <bool>false</bool>
@@ -70,6 +69,9 @@
        <bool>true</bool>
       </property>
       <widget class="QWidget" name="tab_1">
+       <property name="styleSheet">
+        <string notr="true">background-color: rgb(0, 0, 0, 0);</string>
+       </property>
        <attribute name="icon">
         <iconset resource="res.qrc">
          <normaloff>:/new/prefix1/res/led-diode2.png</normaloff>:/new/prefix1/res/led-diode2.png</iconset>
@@ -83,10 +85,10 @@
        <widget class="QFrame" name="frame_2">
         <property name="geometry">
          <rect>
-          <x>20</x>
+          <x>0</x>
           <y>20</y>
-          <width>471</width>
-          <height>242</height>
+          <width>518</width>
+          <height>271</height>
          </rect>
         </property>
         <property name="styleSheet">
@@ -100,10 +102,10 @@
         <widget class="Line" name="line_5">
          <property name="geometry">
           <rect>
-           <x>420</x>
-           <y>141</y>
+           <x>440</x>
+           <y>158</y>
            <width>41</width>
-           <height>81</height>
+           <height>82</height>
           </rect>
          </property>
          <property name="frameShadow">
@@ -122,10 +124,10 @@
         <widget class="Line" name="line_6">
          <property name="geometry">
           <rect>
-           <x>420</x>
-           <y>31</y>
+           <x>440</x>
+           <y>30</y>
            <width>41</width>
-           <height>97</height>
+           <height>114</height>
           </rect>
          </property>
          <property name="frameShadow">
@@ -144,9 +146,9 @@
         <widget class="Line" name="line">
          <property name="geometry">
           <rect>
-           <x>20</x>
+           <x>29</x>
            <y>10</y>
-           <width>151</width>
+           <width>140</width>
            <height>41</height>
           </rect>
          </property>
@@ -169,9 +171,9 @@
          </property>
          <property name="geometry">
           <rect>
-           <x>20</x>
-           <y>211</y>
-           <width>421</width>
+           <x>30</x>
+           <y>229</y>
+           <width>431</width>
            <height>21</height>
           </rect>
          </property>
@@ -205,7 +207,7 @@
         <widget class="Line" name="line_4">
          <property name="geometry">
           <rect>
-           <x>10</x>
+           <x>20</x>
            <y>31</y>
            <width>21</width>
            <height>91</height>
@@ -232,7 +234,7 @@
           <rect>
            <x>290</x>
            <y>11</y>
-           <width>151</width>
+           <width>171</width>
            <height>41</height>
           </rect>
          </property>
@@ -255,9 +257,9 @@
          </property>
          <property name="geometry">
           <rect>
-           <x>40</x>
-           <y>90</y>
-           <width>101</width>
+           <x>60</x>
+           <y>95</y>
+           <width>111</width>
            <height>66</height>
           </rect>
          </property>
@@ -289,7 +291,7 @@
         <widget class="Line" name="line_9">
          <property name="geometry">
           <rect>
-           <x>7</x>
+           <x>17</x>
            <y>130</y>
            <width>28</width>
            <height>21</height>
@@ -352,10 +354,10 @@
         <widget class="Line" name="line_2">
          <property name="geometry">
           <rect>
-           <x>10</x>
-           <y>141</y>
+           <x>20</x>
+           <y>140</y>
            <width>21</width>
-           <height>81</height>
+           <height>100</height>
           </rect>
          </property>
          <property name="frameShadow">
@@ -374,7 +376,7 @@
         <widget class="Line" name="line_8">
          <property name="geometry">
           <rect>
-           <x>12</x>
+           <x>22</x>
            <y>111</y>
            <width>18</width>
            <height>20</height>
@@ -402,10 +404,10 @@
         <widget class="QFrame" name="frame_21">
          <property name="geometry">
           <rect>
-           <x>298</x>
-           <y>82</y>
-           <width>131</width>
-           <height>114</height>
+           <x>300</x>
+           <y>80</y>
+           <width>141</width>
+           <height>121</height>
           </rect>
          </property>
          <property name="styleSheet">
@@ -446,13 +448,23 @@
          </property>
         </widget>
         <widget class="QLabel" name="label_v1">
+         <property name="enabled">
+          <bool>true</bool>
+         </property>
          <property name="geometry">
           <rect>
-           <x>115</x>
-           <y>125</y>
+           <x>140</x>
+           <y>130</y>
            <width>19</width>
-           <height>22</height>
+           <height>21</height>
           </rect>
+         </property>
+         <property name="font">
+          <font>
+           <pointsize>10</pointsize>
+           <weight>75</weight>
+           <bold>true</bold>
+          </font>
          </property>
          <property name="autoFillBackground">
           <bool>false</bool>
@@ -467,11 +479,18 @@
         <widget class="QLabel" name="label_v2">
          <property name="geometry">
           <rect>
-           <x>400</x>
+           <x>410</x>
            <y>111</y>
-           <width>23</width>
+           <width>18</width>
            <height>20</height>
           </rect>
+         </property>
+         <property name="font">
+          <font>
+           <pointsize>10</pointsize>
+           <weight>75</weight>
+           <bold>true</bold>
+          </font>
          </property>
          <property name="text">
           <string>V.</string>
@@ -480,21 +499,15 @@
         <widget class="QLabel" name="label_vol_fuente">
          <property name="geometry">
           <rect>
-           <x>50</x>
-           <y>100</y>
-           <width>79</width>
+           <x>70</x>
+           <y>105</y>
+           <width>92</width>
            <height>16</height>
           </rect>
          </property>
          <property name="minimumSize">
           <size>
            <width>71</width>
-           <height>16</height>
-          </size>
-         </property>
-         <property name="maximumSize">
-          <size>
-           <width>85</width>
            <height>16</height>
           </size>
          </property>
@@ -522,21 +535,15 @@
         <widget class="QLineEdit" name="lineEdit_voltage1">
          <property name="geometry">
           <rect>
-           <x>50</x>
-           <y>125</y>
-           <width>79</width>
+           <x>73</x>
+           <y>129</y>
+           <width>84</width>
            <height>24</height>
           </rect>
          </property>
          <property name="minimumSize">
           <size>
            <width>71</width>
-           <height>24</height>
-          </size>
-         </property>
-         <property name="maximumSize">
-          <size>
-           <width>79</width>
            <height>24</height>
           </size>
          </property>
@@ -592,17 +599,11 @@
           <rect>
            <x>310</x>
            <y>110</y>
-           <width>104</width>
+           <width>116</width>
            <height>22</height>
           </rect>
          </property>
          <property name="minimumSize">
-          <size>
-           <width>104</width>
-           <height>22</height>
-          </size>
-         </property>
-         <property name="maximumSize">
           <size>
            <width>104</width>
            <height>22</height>
@@ -670,9 +671,9 @@
         <widget class="QLabel" name="label_corriente_led">
          <property name="geometry">
           <rect>
-           <x>298</x>
+           <x>300</x>
            <y>170</y>
-           <width>128</width>
+           <width>132</width>
            <height>16</height>
           </rect>
          </property>
@@ -772,6 +773,38 @@
           <set>Qt::AlignCenter</set>
          </property>
         </widget>
+        <widget class="QLabel" name="label_led_on">
+         <property name="enabled">
+          <bool>false</bool>
+         </property>
+         <property name="geometry">
+          <rect>
+           <x>460</x>
+           <y>130</y>
+           <width>41</width>
+           <height>41</height>
+          </rect>
+         </property>
+         <property name="autoFillBackground">
+          <bool>false</bool>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">background-color: qlineargradient(spread:pad, x1:0, y1:0,
+                    x2:1, y2:1, stop:0 rgba(0, 0, 0, 0));</string>
+         </property>
+         <property name="text">
+          <string/>
+         </property>
+         <property name="pixmap">
+          <pixmap resource="res.qrc">:/new/prefix1/res/led-diode1.png</pixmap>
+         </property>
+         <property name="scaledContents">
+          <bool>true</bool>
+         </property>
+         <property name="alignment">
+          <set>Qt::AlignJustify|Qt::AlignVCenter</set>
+         </property>
+        </widget>
         <zorder>frame</zorder>
         <zorder>line_5</zorder>
         <zorder>line_6</zorder>
@@ -795,14 +828,15 @@
         <zorder>label_v2</zorder>
         <zorder>comboBox_ampere</zorder>
         <zorder>label_Watt</zorder>
+        <zorder>label_led_on</zorder>
        </widget>
        <widget class="QLabel" name="label_imagen">
         <property name="geometry">
          <rect>
-          <x>20</x>
-          <y>20</y>
-          <width>481</width>
-          <height>251</height>
+          <x>0</x>
+          <y>0</y>
+          <width>517</width>
+          <height>299</height>
          </rect>
         </property>
         <property name="autoFillBackground">
@@ -830,43 +864,13 @@
          <bool>false</bool>
         </property>
        </widget>
-       <widget class="QLabel" name="label_led_on">
-        <property name="enabled">
-         <bool>false</bool>
-        </property>
-        <property name="geometry">
-         <rect>
-          <x>457</x>
-          <y>133</y>
-          <width>41</width>
-          <height>41</height>
-         </rect>
-        </property>
-        <property name="autoFillBackground">
-         <bool>false</bool>
-        </property>
-        <property name="styleSheet">
-         <string notr="true">background-color: qlineargradient(spread:pad, x1:0, y1:0,
-                    x2:1, y2:1, stop:0 rgba(0, 0, 0, 0));</string>
-        </property>
-        <property name="text">
-         <string/>
-        </property>
-        <property name="pixmap">
-         <pixmap resource="res.qrc">:/new/prefix1/res/led-diode1.png</pixmap>
-        </property>
-        <property name="scaledContents">
-         <bool>true</bool>
-        </property>
-        <property name="alignment">
-         <set>Qt::AlignJustify|Qt::AlignVCenter</set>
-        </property>
-       </widget>
        <zorder>label_imagen</zorder>
        <zorder>frame_2</zorder>
-       <zorder>label_led_on</zorder>
       </widget>
       <widget class="QWidget" name="tab_2">
+       <property name="styleSheet">
+        <string notr="true">background-color: rgb(245, 245, 245);</string>
+       </property>
        <attribute name="icon">
         <iconset resource="res.qrc">
          <normaloff>:/new/prefix1/res/resistor.png</normaloff>:/new/prefix1/res/resistor.png</iconset>
@@ -878,75 +882,21 @@
         <string>Calc. de Colores.</string>
        </attribute>
        <layout class="QGridLayout" name="gridLayout_2">
-        <item row="1" column="0">
-         <layout class="QHBoxLayout" name="horizontalLayout_2">
-          <item>
-           <spacer name="horizontalSpacer_5">
-            <property name="orientation">
-             <enum>Qt::Horizontal</enum>
-            </property>
-            <property name="sizeHint" stdset="0">
-             <size>
-              <width>40</width>
-              <height>20</height>
-             </size>
-            </property>
-           </spacer>
-          </item>
-          <item>
-           <spacer name="horizontalSpacer_4">
-            <property name="orientation">
-             <enum>Qt::Horizontal</enum>
-            </property>
-            <property name="sizeHint" stdset="0">
-             <size>
-              <width>40</width>
-              <height>20</height>
-             </size>
-            </property>
-           </spacer>
-          </item>
-          <item>
-           <widget class="QRadioButton" name="radioButton_3bandas">
-            <property name="text">
-             <string>3 bandas</string>
-            </property>
-            <property name="checked">
-             <bool>true</bool>
-            </property>
-           </widget>
-          </item>
-          <item>
-           <widget class="QRadioButton" name="radioButton_4bandas">
-            <property name="text">
-             <string>4 bandas</string>
-            </property>
-           </widget>
-          </item>
-          <item>
-           <widget class="QRadioButton" name="radioButton_5bandas">
-            <property name="text">
-             <string>5 bandas</string>
-            </property>
-           </widget>
-          </item>
-         </layout>
-        </item>
-        <item row="6" column="0">
+        <item row="7" column="0">
          <widget class="QLabel" name="label_ohm">
           <property name="text">
            <string>Ohm</string>
           </property>
          </widget>
         </item>
-        <item row="8" column="0">
+        <item row="9" column="0">
          <widget class="QLabel" name="label_tolerancia">
           <property name="text">
            <string>Tolerancia</string>
           </property>
          </widget>
         </item>
-        <item row="5" column="0">
+        <item row="6" column="0">
          <widget class="QComboBox" name="comboBox_prueba">
           <property name="font">
            <font>
@@ -961,6 +911,9 @@
           </property>
           <property name="maxVisibleItems">
            <number>12</number>
+          </property>
+          <property name="sizeAdjustPolicy">
+           <enum>QComboBox::AdjustToMinimumContentsLengthWithIcon</enum>
           </property>
           <item>
            <property name="text">
@@ -997,7 +950,7 @@
             <string>Azul</string>
            </property>
            <property name="icon">
-            <iconset resource="res.qrc">
+            <iconset>
              <normaloff>:/new/prefix1/res/colores/sin color.png</normaloff>:/new/prefix1/res/colores/sin color.png</iconset>
            </property>
           </item>
@@ -1461,6 +1414,73 @@
           </item>
          </layout>
         </item>
+        <item row="5" column="0">
+         <spacer name="verticalSpacer">
+          <property name="orientation">
+           <enum>Qt::Vertical</enum>
+          </property>
+          <property name="sizeHint" stdset="0">
+           <size>
+            <width>20</width>
+            <height>40</height>
+           </size>
+          </property>
+         </spacer>
+        </item>
+        <item row="1" column="0">
+         <layout class="QHBoxLayout" name="horizontalLayout_2">
+          <item>
+           <spacer name="horizontalSpacer_5">
+            <property name="orientation">
+             <enum>Qt::Horizontal</enum>
+            </property>
+            <property name="sizeHint" stdset="0">
+             <size>
+              <width>40</width>
+              <height>20</height>
+             </size>
+            </property>
+           </spacer>
+          </item>
+          <item>
+           <spacer name="horizontalSpacer_4">
+            <property name="orientation">
+             <enum>Qt::Horizontal</enum>
+            </property>
+            <property name="sizeHint" stdset="0">
+             <size>
+              <width>40</width>
+              <height>20</height>
+             </size>
+            </property>
+           </spacer>
+          </item>
+          <item>
+           <widget class="QRadioButton" name="radioButton_3bandas">
+            <property name="text">
+             <string>3 bandas</string>
+            </property>
+            <property name="checked">
+             <bool>true</bool>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QRadioButton" name="radioButton_4bandas">
+            <property name="text">
+             <string>4 bandas</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QRadioButton" name="radioButton_5bandas">
+            <property name="text">
+             <string>5 bandas</string>
+            </property>
+           </widget>
+          </item>
+         </layout>
+        </item>
         <item row="2" column="0">
          <widget class="QFrame" name="frame_3">
           <property name="frameShape">
@@ -1499,27 +1519,11 @@
           </layout>
          </widget>
         </item>
-        <item row="4" column="0">
-         <spacer name="verticalSpacer">
-          <property name="orientation">
-           <enum>Qt::Vertical</enum>
-          </property>
-          <property name="sizeHint" stdset="0">
-           <size>
-            <width>20</width>
-            <height>40</height>
-           </size>
-          </property>
-         </spacer>
-        </item>
        </layout>
       </widget>
       <widget class="QWidget" name="tab_3">
        <property name="enabled">
         <bool>true</bool>
-       </property>
-       <property name="autoFillBackground">
-        <bool>false</bool>
        </property>
        <property name="styleSheet">
         <string notr="true">background-color: qlineargradient(spread:pad, x1:0.489, y1:1, x2:0.477, y2:0, stop:0 rgba(0, 0, 127, 255), stop:0.272727 rgba(60, 60, 60, 255), stop:1 rgba(0, 0, 0, 255));
@@ -1535,8 +1539,7 @@ color: rgb(255, 255, 255);</string>
            <bool>true</bool>
           </property>
           <property name="styleSheet">
-           <string notr="true">background-color: qlineargradient(spread:pad, x1:0.489, y1:1, x2:0.477, y2:0, stop:0 rgba(0, 0, 127, 255), stop:0.272727 rgba(60, 60, 60, 255), stop:1 rgba(0, 0, 0, 255));
-color: rgb(255, 255, 255);</string>
+           <string notr="true">background-color: rgb(0, 0, 0, 0);</string>
           </property>
           <layout class="QGridLayout" name="gridLayout_4">
            <item row="0" column="0">
@@ -1544,7 +1547,7 @@ color: rgb(255, 255, 255);</string>
              <property name="orientation">
               <enum>Qt::Vertical</enum>
              </property>
-             <widget class="QWidget" name="">
+             <widget class="QWidget" name="layoutWidget">
               <layout class="QHBoxLayout" name="horizontalLayout_4">
                <item>
                 <widget class="QWidget" name="widget_2" native="true">
@@ -1595,9 +1598,6 @@ color: rgb(255, 255, 255);</string>
                 <bold>true</bold>
                </font>
               </property>
-              <property name="styleSheet">
-               <string notr="true">background-color: rgb(0, 0, 0, 0);</string>
-              </property>
               <property name="text">
                <string>Zona en construcción.</string>
               </property>
@@ -1608,22 +1608,25 @@ color: rgb(255, 255, 255);</string>
             </widget>
            </item>
           </layout>
-          <zorder>label_constuccion1</zorder>
-          <zorder>label_construccion2</zorder>
-          <zorder>widget</zorder>
-          <zorder>widget_2</zorder>
          </widget>
         </item>
        </layout>
       </widget>
      </widget>
     </item>
-    <item row="2" column="0">
+    <item row="3" column="0">
      <widget class="QLabel" name="label_info">
       <property name="font">
        <font>
         <pointsize>10</pointsize>
        </font>
+      </property>
+     </widget>
+    </item>
+    <item row="2" column="0">
+     <widget class="Line" name="line_10">
+      <property name="orientation">
+       <enum>Qt::Horizontal</enum>
       </property>
      </widget>
     </item>
