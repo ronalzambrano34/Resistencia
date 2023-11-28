@@ -1,2 +1,16 @@
 Resistencia.pro.user
 .vscode
+.qmake.stash
+Makefile
+Makefile.Debug
+Makefile.Release
+Resistencia_resource.rc
+Resistencia.pro.user.4.8-pre1
+resistencia.ui.autosave
+ui_resistencia.h
+release
+.qtc_clangd
+
+
+
+

@@ -31,14 +31,12 @@ private slots:
     ////////////// \Cálculo de Colores ////////////////////
     ///////////////////////////////////////////////////////
     void calcular_Color();
+    void calcular_tolerancia();
 
     void on_radioButton_3bandas_clicked();
     void on_radioButton_4bandas_clicked();
     void on_radioButton_5bandas_clicked();
 
-    /// @brief 
-    /// @param index 
-    /// @return 
     QString obten_colores_del_boton(int index); /// es de prueba
     void on_comboBox_suma1_currentIndexChanged(int index);
     void on_comboBox_suma2_currentIndexChanged(int index);
@@ -54,6 +52,7 @@ private slots:
     ///////////////////////////////////////////////////////
     void on_actionAcerca_triggered();
     void on_actionLey_de_Ohm_triggered();
+    void on_actionCode_Color_triggered();
 
 private:
     Ui::Resistencia *ui;

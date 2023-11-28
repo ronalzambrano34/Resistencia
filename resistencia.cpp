@@ -23,7 +23,6 @@ Resistencia::Resistencia(QWidget *parent) : QMainWindow(parent),
     QList<QColor> bgColors{QColor(Qt::black), QColor(153, 76, 0, 255), QColor(Qt::red), QColor(255, 80, 0, 255), QColor(Qt::yellow), QColor(Qt::green), QColor(Qt::blue), QColor(149, 0, 223, 255), QColor(124, 124, 124, 255), QColor(Qt::white), QColor(209, 190, 76, 255), QColor(208, 253, 255, 255)};
     QList<QColor> fgColors{QColor(Qt::black), QColor(Qt::white), QColor(153, 76, 0, 255)};
 
-
     QComboBox *comboBoxes[] = {ui->comboBox_prueba, ui->comboBox_suma1, ui->comboBox_suma2, ui->comboBox_suma3, ui->comboBox_multiplicador, ui->comboBox_tolerancia};
 
     for (QComboBox *comboBox : comboBoxes)
@@ -79,14 +78,15 @@ void Resistencia::calcular_Ej2() /// calcula utilizando LineEdit
 
         ui->statusBar->showMessage("El valor que necesita "
                                    "para la resistencia es de: " +
-                                       QString::number(resultado) + " Ohm",
+                                       QString::number(resultado) + " Ω",
                                    10);
+
+        ui->label_info->setText("El valor que necesita "
+                                "para la resistencia es de: " +
+                                QString::number(resultado) + " Ω");
 
         ui->label_Watt->setText(QString::number(watt) + " Watt");
         qDebug() << resultado;
-        ui->label_info->setText("El valor que necesita "
-                                "para la resistencia es de: " +
-                                QString::number(resultado) + " Ohm");
 
         ui->lcdNumber->display(resultado);
 
@@ -166,13 +166,13 @@ QString Resistencia::obten_colores_del_boton(int index)
 
     // Obtener el índice actual del combo box
     // int currentIndex = ui->comboBox_prueba->currentIndex();
-    int currentIndex = index;
+    // int currentIndex = index;
 
     // Buscar el estilo correspondiente al índice en el arreglo de estilos
     QString style;
     for (const ComboBoxStyle &comboBoxStyle : comboBoxStyles)
     {
-        if (comboBoxStyle.index == currentIndex)
+        if (comboBoxStyle.index == index)
         {
             style = comboBoxStyle.style;
             break;
@@ -215,6 +215,15 @@ void Resistencia::calcular_Color()
     long resul = suma * multiplicador;
     qDebug() << resul;
     ui->label_ohm->setText(QString::number(resul));
+
+}
+
+void Resistencia::calcular_tolerancia()
+{
+    if (ui->comboBox_tolerancia->currentIndex() == 1)
+    {
+        ui->label_tolerancia->setText(ui->comboBox_tolerancia->currentText());
+    }
 }
 
 void Resistencia::on_radioButton_3bandas_clicked()
@@ -223,6 +232,7 @@ void Resistencia::on_radioButton_3bandas_clicked()
     ui->comboBox_suma2->setDisabled(true);
     ui->comboBox_suma1->setHidden(true);
     ui->comboBox_suma1->setDisabled(true);
+    calcular_Color();
 }
 
 void Resistencia::on_radioButton_4bandas_clicked()
@@ -231,6 +241,7 @@ void Resistencia::on_radioButton_4bandas_clicked()
     ui->comboBox_suma2->setDisabled(false);
     ui->comboBox_suma1->setHidden(true);
     ui->comboBox_suma1->setDisabled(true);
+    calcular_Color();
 }
 
 void Resistencia::on_radioButton_5bandas_clicked()
@@ -239,6 +250,7 @@ void Resistencia::on_radioButton_5bandas_clicked()
     ui->comboBox_suma2->setDisabled(false);
     ui->comboBox_suma1->setHidden(false);
     ui->comboBox_suma1->setDisabled(false);
+    calcular_Color();
 }
 
 void Resistencia::on_comboBox_suma1_currentIndexChanged(int index)
@@ -271,12 +283,12 @@ void Resistencia::on_comboBox_multiplicador_currentIndexChanged(int index)
 
 void Resistencia::on_comboBox_tolerancia_currentIndexChanged(int index)
 {
-    calcular_Color();
+    calcular_tolerancia();
     ui->comboBox_tolerancia->setStyleSheet(obten_colores_del_boton(index));
 }
 
 ///////////////////////////////////////////////////////
-////////////// \Barra de Actividades //////////////////
+/////////////// Barra de Actividades //////////////////
 ///////////////////////////////////////////////////////
 
 void Resistencia::on_actionAcerca_triggered()
@@ -286,12 +298,18 @@ void Resistencia::on_actionAcerca_triggered()
                                                     "<blockquote>"
                                                     "<p>Santiago de Cuba (Cuba)"
                                                     "<p>Movil: <strong>+53 53843778</strong> "
-                                                    "<p><a href=\"https://wa.me/qr/OYEYTBZMFJWWI1\"><font color=green>WhatsApp.</font>" "  " /// LINK  https://wa.me/qr/OYEYTBZMFJWWI1
+                                                    "<p><a href=\"https://wa.me/qr/OYEYTBZMFJWWI1\"><font color=green>WhatsApp.</font>"
+                                                    "  " /// LINK  https://wa.me/qr/OYEYTBZMFJWWI1
                                                     "<a href=\"https://t.me/MrVirus_CU\"><strong>Telegram.</strong></a>"
                                                     "</blockquote>"));
 }
 
 void Resistencia::on_actionLey_de_Ohm_triggered()
 {
-    QMessageBox::about(this, tr("Acerca"), "<img src=\":/new/prefix1/res/Ley_Ohm.png\" alt=\"Imagen de un gato\">");
+    QMessageBox::about(this, tr("Ley de Ohm"), "<img src=\":/new/prefix1/res/Ley_Ohm.png\" alt=\"Imagen de un gato\">");
+}
+
+void Resistencia::on_actionCode_Color_triggered()
+{
+    QMessageBox::about(this, tr("Código de colores"), "<img src=\":/new/prefix1/res/resistor_color_5band.png\" alt=\"Imagen de un gato\">");
 }
